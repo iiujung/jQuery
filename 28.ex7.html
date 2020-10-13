@@ -8,6 +8,7 @@
     <style>
         body {
             margin: 0;
+            /* 三倍的畫面 */
             height: 300vh;
         }
 
@@ -35,10 +36,11 @@
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script>
         let pageHeight = $('body').height()
+        let windowHeight = $(window).height()
 
         $(window).scroll(function () {
-            let scrollTop = $(this).scrollTop
-            let percent = (scrollTop / pageHeight) * 100 + "%"
+            let scrollTop = $(this).scrollTop()
+            let percent = (scrollTop / (pageHeight - windowHeight)) * 100 + "%"
 
             $('.bar').css('width', percent)
         })
