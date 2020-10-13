@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>content filter</title>
+</head>
+
+<body>
+    <div class="names">Jason Kidd</div>
+    <div class="names">LeBron James</div>
+    <div class="names">Jason Williams</div>
+    <div class="names">James Harden</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script>
+        // 針對內容作選取
+        $("div.names:contains('Jason')").css("background", "yellow");
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <table class="table table-bordered mt-5">
+                <tr>
+                    <td><input type="checkbox" name="" id="" /></td>
+                    <td>Elon Musk</td>
+                    <td>0912345678</td>
+                    <td>Elon Musk@gmail.com</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id="" /></td>
+                    <td>Mark Zuckerberg</td>
+                    <td>0912345678</td>
+                    <td>Mark Zuckerberg@gmail.com</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id="" /></td>
+                    <td>Bill Gates</td>
+                    <td>0912345678</td>
+                    <td>Bill Gates@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="" id="" />
+                    </td>
+                    <td>Larry Page</td>
+                    <td>0912345678</td>
+                    <td>Larry Page@gmail.com</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script>
+        // 寫法一 利用if else 判斷 true/false
+
+        // $('input[type="checkbox"]').click(function () {
+        //     console.log('checkbox:', $(this).prop('checked'));
+
+        //     if ($(this).prop('checked')) {
+        //         $(this).closest('tr').css('background', 'lightblue');
+        //     }
+        //     else {
+        //         $(this).closest('tr').css('background', 'transparent');
+        //     }
+        // })
+
+        // 寫法二 利用選取器選出
+
+        // $('input[type="checkbox"]').click(function () {
+        //     $('tr').css('background', 'transparent');
+        //     $('input:checked').closest('tr').css('background', 'lightblue');
+        // })
+
+        $('input[type="checkbox"]').click(function () {
+            console.log('checkbox:')
+        })
+    </script>
+</body>
+
+</html>

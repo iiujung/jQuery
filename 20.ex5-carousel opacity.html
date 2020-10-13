@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carousal opacity</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        .wrap {
+            width: 800px;
+            height: 400px;
+            /* overflow: hidden; */
+        }
+
+        .img-wrap {
+            left: 0;
+            transition: .5s;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 將照片都疊在同一個位置 */
+        .img-wrap li {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        /* 一開始圖片是透明的 */
+        li img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: .5s;
+        }
+
+        .slider-dots {
+            bottom: 0;
+        }
+
+        .slider-dots li {
+            width: 40px;
+            height: 10px;
+            margin: 0 4px;
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap position-relative">
+        <ul class="img-wrap list-unstyled position-absolute">
+            <li><img src="./imgs/slide1.jpg" alt="" href="">
+            </li>
+            <li><img src="./imgs/slide2.jpg" alt="" href="">
+            </li>
+            <li><img src="./imgs/slide3.jpg" alt="" href="">
+            </li>
+            <li><img src="./imgs/slide4.jpg" alt="" href="">
+            </li>
+            <li><img src="./imgs/slide5.jpg" alt="" href="">
+            </li>
+        </ul>
+
+        <ul class="slider-dots list-unstyled position-absolute d-flex justify-content-center w-100">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+        </ul>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script>
+        $('.slider-dots li').first().css('background', '#fff')
+        // 初始化全部變0
+        $('li img').css('opacity', '0')
+        $('li img').first().css('opacity', '1')
+
+        // 滑鼠移到按鈕變色
+        $('.slider-dots li').hover(function () {
+            console.log('hi', $(this).index());
+            $(this).css('background', '#fff').siblings().css('background', 'none');
+            // 點選到的opacity變成1
+            // $('li img').css('opacity', '0') 可以直接寫同一行
+            $('li img').css('opacity', '0').eq($(this).index()).css('opacity', '1')
+        })
+    </script>
+</body>
+
+</html>

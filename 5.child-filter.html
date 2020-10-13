@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <button>change color</button>
+    <main>
+        <div class="wrap">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+            <div class="box">box4</div>
+            <div class="box">box5</div>
+            <div class="box">box6</div>
+            <div class="box">box7</div>
+            <div class="box">box8</div>
+            <div class="box">box9</div>
+            <div class="box">box10</div>
+            <div class="box">box11</div>
+            <div class="box">box12</div>
+            <!-- <p>123</p> -->
+        </div>
+
+        <div class="wrap2">wrap2</div>
+    </main>
+
+    <div class="wrap3">wrap3</div>
+    <!-- only-child - 選取唯一的子層-->
+    <div class="wrap4">
+        <span>span</span>
+    </div>
+    <!-- only-child 這樣就會失效-->
+    <div class="wrap4">
+        <span>span</span>
+        <span>span</span>
+    </div>
+
+    <div class="wrap5">
+        <span>span</span>
+        <h1>h1</h1>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script>
+        // $('div:first-child').css('background', 'gray')
+        $('div:last-child').css('background', 'gray')
+        // 註解掉P的時候才會生效，因為這樣在節點中div才會是最後一個
+        $('.box:last-child').css('background', 'DodgerBlue')
+        // nth-child(n) - 選取第 n 個
+        $('.box:nth-child(5)').css('background', 'MediumOrchid')
+        // first-of-type - 選取同類第一個
+        $('.box:first-of-type').css('background', 'LightSteelBlue')
+
+        $('span:only-child').css('background', 'Fuchsia')
+
+        $('h1:only-of-type').css('background', 'LightPink')
+
+    </script>
+</body>
+
+</html>

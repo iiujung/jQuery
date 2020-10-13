@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="">
+            <table class="table table-borderd">
+                <tr>
+                    <td>td1</td>
+                    <td>td2</td>
+                    <td>td3</td>
+                    <td>td4</td>
+                    <td>td5</td>
+                </tr>
+                <tr>
+                    <td>td1</td>
+                    <td>td2</td>
+                    <td>td3</td>
+                    <td>td4</td>
+                    <td>td5</td>
+                </tr>
+                <tr>
+                    <td>td1</td>
+                    <td>td2</td>
+                    <td>td3</td>
+                    <td>td4</td>
+                    <td>td5</td>
+                </tr>
+                <tr>
+                    <td>td1</td>
+                    <td>
+                        <h4>
+                            td2
+                        </h4>
+                    </td>
+                    <td>td3</td>
+                    <td>td4</td>
+                    <td>td5</td>
+                </tr>
+                <tr>
+                    <td>td1</td>
+                    <td>
+                        <h2>
+                            td2
+                        </h2>
+                    </td>
+                    <td>td3</td>
+                    <td>td4</td>
+                    <td>td5</td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <div>​
+                <div class="a1">A1</div>​
+            </div>​
+
+            <div>​
+                <div class="a2">A2</div>​
+            </div>
+        </div>
+        <div class="row">
+            <div class="b1">b1</div>​
+
+            <div class="b2">b2</div>​
+
+            <div class="b3">b3</div>
+
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>​
+    <script>
+        $('td').eq(0).css('background', 'yellow');
+        //         $('td').even().css('background', 'blue')
+        $('td').odd().css('background', 'lightblue');
+
+        $(".row div").has(".a1").css("background", "red");
+        $(".row div").not(".b1").css("background", "lightblue");
+
+    </script>
+</body>
+
+</html>

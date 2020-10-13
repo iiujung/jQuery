@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div>
+                <input type="checkbox" name="alex">
+                <span>Alex</span>
+            </div>
+            <div>
+                <input type="checkbox" name="bill" checked="checked">
+                <span>Bill</span>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $("input:not(:checked) + span").css("background", "yellow");
+    </script>
+</body>
+
+</html>
