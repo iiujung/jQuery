@@ -67,10 +67,10 @@
 
         // 寫法二 利用選取器選出
 
-        // $('input[type="checkbox"]').click(function () {
-        //     $('tr').css('background', 'transparent');
-        //     $('input:checked').closest('tr').css('background', 'lightblue');
-        // })
+        $('input[type="checkbox"]').click(function () {
+            $('tr').css('background', 'transparent');
+            $('input:checked').closest('tr').css('background', 'lightblue');
+        })
 
         $('input[type="checkbox"]').click(function () {
             console.log('checkbox:')
