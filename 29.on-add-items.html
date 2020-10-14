@@ -39,9 +39,18 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <script>
+        // 痊癒變數
+        let itemIndex = 3;
+
         $('#add').on('click', function () {
-            let newItemHtml = '<li>item1</li>'
+            // 區域變數
+            // es5寫法
+            // let newItemHtml = '<li>item' + itemIndex + '</li>'
+            // es6 寫法 
+            let newItemHtml = `<li>item${itemIndex}</li>`
             $('ul').append(newItemHtml)
+            // itemIndex = itemIndex + 1
+            itemIndex += 1
         })
         // 如果用這種寫法 click 沒辦法辨別產生的值
         // $('ul li').click(function () {
